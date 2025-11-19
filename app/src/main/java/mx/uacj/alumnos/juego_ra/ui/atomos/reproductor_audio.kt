@@ -10,7 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import mx.uacj.alumnos.juego_ra.R
-import mx.uacj.alumnos.juego_ra.modelos.servicios.ReproductorAudio
+import mx.uacj.alumnos.juego_ra.view_models.servicios.ReproductorAudio
 
 @Composable
 fun VistaReproductorAudio(){
