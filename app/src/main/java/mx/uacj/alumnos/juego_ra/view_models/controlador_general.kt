@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import mx.uacj.alumnos.juego_ra.modelos.Pista
 import mx.uacj.alumnos.juego_ra.repositorios.RepositorioInformacionGeneral
+import mx.uacj.alumnos.juego_ra.repositorios.estaticos.RepositorioPruebas.pistas
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,6 +27,7 @@ class ControladorGeneral @Inject constructor(
             }
         }
     }
+
 
     fun el_usuario_ha_identificado_la_pista(pista: Pista){
         infomracion_general.pistas_identificadas.value

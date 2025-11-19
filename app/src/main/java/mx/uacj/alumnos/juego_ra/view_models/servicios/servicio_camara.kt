@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
 
 class ServicioCamara: ViewModel(){
     private var _surface_vista_camara = MutableStateFlow<SurfaceRequest?>(value = null)

@@ -40,13 +40,16 @@ import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
-import dagger.hilt.android.AndroidEntryPoint
 import mx.uacj.alumnos.juego_ra.gestor_permisos.ParaLaSolictudDePermisos
 
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
 import mx.uacj.alumnos.juego_ra.ui.atomos.VistaCamara
 import mx.uacj.alumnos.juego_ra.ui.controladores.NavegadorPrincipal
+import mx.uacj.alumnos.juego_ra.ui.pantallas.Principal
 import mx.uacj.alumnos.juego_ra.ui.theme.Juego_RATheme
 import mx.uacj.alumnos.juego_ra.view_models.GestorUbicacion
+import mx.uacj.alumnos.juego_ra.view_models.servicios.ServicioCamara
 import java.util.concurrent.TimeUnit
 
 @AndroidEntryPoint
@@ -54,8 +57,9 @@ class MainActivity : ComponentActivity() {
     private lateinit var conexion_para_obtener_ubicacion: FusedLocationProviderClient
     private lateinit var puente_para_recivir_updates_ubicacion: LocationCallback
 
-    private var ubicacion_actual = mutableStateOf<Location>(Location("Juego_RA"))
+    private var ubicacion_actual = mutableStateOf<Location>(Location("juego_ra"))
     private var servicio_de_camara = ServicioCamara()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,9 +80,9 @@ class MainActivity : ComponentActivity() {
                             mostrar_resutlado_de_los_permisos = true
 
                             obtener_ubicacion_del_usuario(
-                                cuando_obtenga_la_ultima_posicion_correcta = { ubicacion_nueva ->
-                                    Log.w("Ubicacion nueva", "la ubicacion nueva es ${ubicacion_nueva}")
-                                    gestor_ubicacion.actualizar_ubicacion_actual(ubicacion_nueva)
+                                cuando_obtenga_la_ultima_posicion_correcta = { ubicaion_nueva ->
+                                    Log.w("UBicacion nueva", "la ubicaicon nueva es ${ubicaion_nueva}")
+                                    gestor_ubicacion.actualizar_ubicacion_actual(ubicaion_nueva)
                                 },
 
                                 /*
@@ -98,6 +102,7 @@ class MainActivity : ComponentActivity() {
                         }
                     ) {}
 
+
                     //VistaCamara(servicio_de_camara = servicio_de_camara, modificador = Modifier.padding(innerPadding))
                     Box{
                         /*
@@ -109,6 +114,7 @@ class MainActivity : ComponentActivity() {
                         )
                         */
                         NavegadorPrincipal(modificador = Modifier.padding(innerPadding))
+                    }
 
                 }
             }
