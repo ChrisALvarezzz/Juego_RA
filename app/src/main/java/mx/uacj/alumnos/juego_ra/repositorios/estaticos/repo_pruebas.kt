@@ -1,8 +1,10 @@
 package mx.uacj.alumnos.juego_ra.repositorios.estaticos
 
 import android.location.Location
+import mx.uacj.alumnos.juego_ra.modelos.Boton
 
 import mx.uacj.alumnos.juego_ra.modelos.Informacion
+import mx.uacj.alumnos.juego_ra.modelos.InformacionInteractiva
 import mx.uacj.alumnos.juego_ra.modelos.Pista
 
 object RepositorioPruebas{
@@ -49,11 +51,11 @@ object RepositorioPruebas{
                 lista_de_botones = listOf(
                     Boton(
                         texto = "Ir a pantalla 1",
-                        direccion = null
+                        direccion = "pista_1"
                     ),
                     Boton(
                         texto = "Ir a pantalla dos",
-                        direccion = null
+                        direccion = "pista_2"
                     )
                 )
             )

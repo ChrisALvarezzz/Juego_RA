@@ -9,7 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import mx.uacj.alumnos.juego_ra.view_models.servicios.ServicioCamara
+import mx.uacj.alumnos.juego_ra.modelos.servicios.ServicioCamara
 
 @Composable
 fun VistaCamara(

@@ -1,4 +1,4 @@
-package mx.uacj.alumnos.juego_ra.view_models.servicios
+package mx.uacj.alumnos.juego_ra.modelos.servicios
 
 import android.content.Context
 import androidx.camera.core.CameraSelector

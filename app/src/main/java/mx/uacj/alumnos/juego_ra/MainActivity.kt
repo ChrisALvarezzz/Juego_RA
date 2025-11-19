@@ -12,24 +12,17 @@ import android.util.Pair
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 
 import androidx.core.app.ActivityCompat
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -43,13 +36,10 @@ import com.google.android.gms.tasks.CancellationTokenSource
 import mx.uacj.alumnos.juego_ra.gestor_permisos.ParaLaSolictudDePermisos
 
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.lifecycle.HiltViewModel
-import mx.uacj.alumnos.juego_ra.ui.atomos.VistaCamara
 import mx.uacj.alumnos.juego_ra.ui.controladores.NavegadorPrincipal
-import mx.uacj.alumnos.juego_ra.ui.pantallas.Principal
 import mx.uacj.alumnos.juego_ra.ui.theme.Juego_RATheme
 import mx.uacj.alumnos.juego_ra.view_models.GestorUbicacion
-import mx.uacj.alumnos.juego_ra.view_models.servicios.ServicioCamara
+import mx.uacj.alumnos.juego_ra.modelos.servicios.ServicioCamara
 import java.util.concurrent.TimeUnit
 
 @AndroidEntryPoint
